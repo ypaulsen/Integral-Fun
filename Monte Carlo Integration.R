@@ -26,10 +26,10 @@ MC <- 10000000
 x <- runif(MC, a, b)
 (b-a)*mean(f(x))
 
-# The output of this program varies based on the random number generator. To get 
-# a sense of the performance of this integration I will examine the mean 
-# absolute error (MAE). The for-loop below performs the same integration 100 
-# times and outputs MAE.  
+# The output of this program varies based on the random number generator. To  
+# evaluate the performance of this integration I will examine the mean absolute 
+# error (MAE). The for-loop below performs the same integration 100 times and 
+# outputs MAE.  
 
 
 set.seed(pi)
