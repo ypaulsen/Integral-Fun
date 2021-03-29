@@ -4,15 +4,15 @@
 
 # The following program uses Acceptance/Rejection integration to calculate the 
 # area under the curve of the standard normal distribution over the interval 
-# (-1.96, 1.96). This integral is well known. While there is no exact closed 
-# form solution for this integral over an arbitrary range, the practiced 
-# statistician will recognize that this interval contains 95% of a probability 
-# density function and therefore the exact solution is known as 0.95.   
+# (-1.96, 1.96). This integral is well known and while there is no exact closed 
+# form solution over any given range, statisticians will recognize that this 
+# interval contains 95% of a probability density function and so the exact 
+# solution is known as 0.95.   
 
 # This program performs Acceptance/Rejection integration on the function defined
-# as f() over the interval (a, b). I have used the normal distribution in this 
-# example over a well studied interval for demonstration purposes since it has 
-# a widely known and predictable outcome.  
+# as f() over the interval (a, b). For demonstration purposes, this example uses
+# the normal distribution over a widely studied interval since it has a well 
+# known and predictable outcome.  
 
 
 # Function  
@@ -32,15 +32,16 @@ A <- (b-a)*max                        # Area of entire region
 p*A                                   # Proportion of area under the curve     
 
 
-# The output of this program varies based on the random number generator. To get 
-# a sense of the performance of this integration I will examine the mean 
-# absolute error (MAE). The for-loop below performs the same integration 100 
-# times and outputs MAE.  
+# The output of this program varies by the results of the random number 
+# generator. To evaluate the performance of this integration I'll look at the 
+# mean absolute error (MAE) of the output. The integral here has a known 
+# solution of 0.95. This for-loop performs the same integration 100 times checks 
+# the results against the known solution and outputs MAE.  
 
 
 set.seed(pi)
 
-error <- c()
+absolute_error <- c()
 
 for(i in 1:100){
   x <- runif(n, a, b)
@@ -48,11 +49,11 @@ for(i in 1:100){
   p <- mean(y < f(x))
   A <- (b-a)*max
   I <- p*A
-  error[i] <- abs(0.95 - I)
+  absolute_error[i] <- abs(0.95 - I)
 }
 
-mean(error)
+mean(absolute_error)
 
 
 # With the supplied seed, the mean absolute error is just 0.00062. Or around 
-# 0.062%.  
+# 0.065%.  
