@@ -27,7 +27,7 @@ max <- optimize(f, c(a,b), maximum = T)$objective
 n <- 1000000                          # Number of random points to evaluate
 x <- runif(n, a, b)                   # n Random x values from U(a,b)
 y <- runif(n, 0, max)                 # n Random y values from U(0, max)
-p <- mean(y<f(x))                     # Proportion of y values less than f(x)
+p <- mean(y < f(x))                     # Proportion of y values less than f(x)
 A <- (b-a)*max                        # Area of entire region  
 p*A                                   # Proportion of area under the curve     
 
