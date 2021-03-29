@@ -9,7 +9,6 @@
 # statistician will recognize that this interval contains 95% of a probability 
 # density function and therefore the exact solution is known as 0.95.   
 
-
 # This program performs Acceptance/Rejection integration on the function defined
 # as f() over the interval (a, b). I have used the normal distribution in this 
 # example over a well studied interval for demonstration purposes since it has 
@@ -22,7 +21,6 @@ f <- function(x) dnorm(x)             # Input function to analyze
 # Interval     
 a <- -1.959964; b <- 1.959964         # Interval containing 95% of a pdf
 
-                                            
 # Maximum value of f(x) over (a,b)  
 max <- optimize(f, c(a,b), maximum = T)$objective
 
@@ -38,6 +36,7 @@ p*A                                   # Proportion of area under the curve
 # a sense of the performance of this integration I will examine the mean 
 # absolute error (MAE). The for-loop below performs the same integration 100 
 # times and outputs MAE.  
+
 
 set.seed(pi)
 
