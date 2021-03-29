@@ -4,15 +4,15 @@
 
 # The following program uses Monte Carlo integration to calculate the area under
 # the curve of the standard normal distribution over the interval (-1.96, 1.96).
-# This integral is well known. While there is no exact closed form solution for 
-# this integral over an arbitrary range, the practiced statistician will 
-# recognize that this interval contains 95% of a probability density function and
-# therefore the exact solution is known as 0.95.   
+# This integral is well known and while there is no exact closed form solution 
+# over any given range, statisticians will recognize that this interval contains
+# 95% of a probability density function and so the exact solution is known as 
+# 0.95.   
 
 # This program performs Monte Carlo integration on the function defined as f() 
-# over the interval (a, b). I have used the normal distribution in this example 
-# over a well studied interval for demonstration purposes since it has a widely 
-# known and predictable outcome.  
+# over the interval (a, b). For demonstration purposes, this example uses the 
+# normal distribution over a widely studied interval since it has a well 
+# known and predictable outcome.   
 
 
 # Function  
@@ -46,5 +46,5 @@ for(i in 1:100){
 mean(absolute_error)
 
 
-# With the supplied seed, the mean absolute error is just 9.275671e-05. Or around 
+# With the supplied seed, the mean absolute error is just 9.275e-05. Or around 
 # 0.0098%.    
