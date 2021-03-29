@@ -23,7 +23,7 @@ f <- function(x) dnorm(x)                     # Input function to analyze
 a <- -1.959964; b <- 1.959964                 # Interval containing 95% of a pdf
 
 # Reimann Integration 
-n <- 100000                                   # Number of intervals to partition
+n <- 10000                                    # Number of intervals to partition
 w <- (b-a)/n                                  # Width of each interval 
 x <- seq(a + .5*w, b - .5*w, length.out = n)  # Vector of midpoints       
 A <- w*f(x)                                   # Width by height   
