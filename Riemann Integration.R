@@ -3,11 +3,11 @@
 # EG Normal distribution   
 
 # The following program uses Riemann integration to calculate the area under the
-# curve of standard normal distribution over the interval (-1.96, 1.96). This 
-# integral is well known. While there is no exact closed form solution for this 
-# integral over an arbitrary range, the practiced statistician will recognize 
-# that this interval contains 95% of a probability density function and 
-# therefore the exact solution is known as 0.95.   
+# curve of the standard normal distribution over the interval (-1.96, 1.96). 
+# This integral is well known. While there is no exact closed form solution for 
+# this integral over an arbitrary range, the practiced statistician will 
+# recognize that this interval contains 95% of a probability density function 
+# and therefore the exact solution is known as 0.95.   
 
 
 # This program performs a Riemann integration on the function defined as f() 
