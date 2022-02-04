@@ -7,14 +7,7 @@
 # This integral is well known. While there is no exact closed form solution for 
 # this integral over an arbitrary range, the practiced statistician will 
 # recognize that this interval contains 95% of a probability density function 
-# and therefore the exact solution is known as 0.95.   
-
-
-# This program performs a Riemann integration on the function defined as f() 
-# over the interval (a, b). I have used the normal distribution in this example 
-# over a well studied interval for demonstration purposes since it has a widely 
-# known and predictable outcome.  
-
+# and therefore the exact solution is known to be 0.95.   
 
 # Function  
 f <- function(x) dnorm(x)                     # Input function to analyze
